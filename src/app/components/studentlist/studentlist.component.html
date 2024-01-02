@@ -1,0 +1,30 @@
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Name</th>
+        <th scope="col">Father Name</th>
+        <th scope="col">Mother Name</th>
+        <th scope="col">Phone</th>
+        <th scope="col">Address</th>
+        <th scope="col">class</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let student of students">
+        <th scope="row">{{student.id}}</th>
+        <td>{{student.name}}</td>
+        <td>{{student.fname}}</td>
+        <td>{{student.mname}}</td>
+        <td>{{student.phone}}</td>
+        <td>{{student.address}}</td>
+        <td>{{student.sclass}}</td>
+        <td>
+            <a type="button" class="btn btn-secondary btn-sm" routerLink="/viewstudent/{{student.id}}">View</a>&nbsp;&nbsp;
+<a type="button" class="btn btn-success btn-sm" routerLink="/updatestudent/{{student.id}}">Update</a>&nbsp;&nbsp;
+<button type="button" class="btn btn-danger btn-sm" (click)="delete(student.id)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>

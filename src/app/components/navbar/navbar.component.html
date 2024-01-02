@@ -1,0 +1,20 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" routerLink="studentlist">Student Management</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link active" aria-current="page" routerLink="studentlist">Student List</a>
+          <a class="nav-link" routerLink="addstudent">Add Student</a>
+          <a class="nav-link" routerLink="updatestudent">Update Student</a>
+          <a class="nav-link" routerLink="deletestudent">Delete Student</a>
+        </div>
+      </div>
+      <li> <button type="button" class="btn btn-secondary" routerLink="/login">Log In</button> </li>
+      <li> <button type="button" class="btn btn-secondary" routerLink="/signup">Sign Up</button> </li>
+      <li> <button type="button" class="btn btn-secondary" (click)="logOut()">Log Out</button> </li>
+    </div>
+  </nav>
+  <router-outlet></router-outlet>
